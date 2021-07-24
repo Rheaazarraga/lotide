@@ -16,10 +16,17 @@ const eqArrays = function(actual, expected) {
   return true;
 };
 
-const assertArraysEqual = (actual, expected) => {
-  if (eqArrays(actual, expected)) {
-    console.log("✅PASSED");
+
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`Assertion Passed: ${actual} ✅ ${expected}`);
   } else {
-    console.log("❌FAILED");
+    console.log(`Assertion Failed: ${actual} ❌ ${expected}`);
   }
 };
+
+assertEqual();
+// TEST CODE
+//assertEqual("Lighthouse Labs", "Bootcamp");
+//assertEqual(1, 1);
+
