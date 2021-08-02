@@ -14,13 +14,20 @@ const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) { //for loop looking for element of the allItems array
   console.log(item);
-  
+  if (results[item]) {
+    results[item] += 1;
+  } else {
+    results[item] = 1;
   }
+  }
+  return results;
+}
+  
   
      //loop through the itemsToCount object
     // The function should report back how many instances of each string were found in the allItems array of strings.
-  return results;
-  }
+
+  
 
   const firstNames = [
     "Karl",
@@ -40,3 +47,22 @@ const countOnly = function(allItems, itemsToCount) {
   assertEqual(result1["Karima"], undefined);
   assertEqual(result1["Fang"], 2);
   assertEqual(result1["Agouhanna"], undefined);
+
+  //MORE TEST CALLS:
+
+const teaTypes = [
+  "earl grey",
+  "matcha",
+  "green tea",
+  "chamomille",
+  "oolong",
+  "green tea",
+  "chamomille",
+  "chamomille",
+  "black tea"
+];
+const result2 = countOnly(teaTypes, { "matcha" : true, "chamomille" : true, "oolong" : false, "black tea" : true})
+assertEqual(result2["matcha"], 1);
+assertEqual(result2["chamomille"], 3);
+assertEqual(result2["green tea"], 2);
+assertEqual(result2["oolong"], undefined);
