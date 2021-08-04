@@ -17,6 +17,7 @@ const findKeyByValue = function(object, value) {
   }
 };
 
+//TEST CASES:
 
 const bestTVShowsByGenre = {
   history: "Vikings",
@@ -27,3 +28,15 @@ const bestTVShowsByGenre = {
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Sopranos"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Breaking Bad"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Vikings"), "history");
+
+//MORE TEST CASES:
+
+const parksInVan = {
+  WestEnd : "Stanley Park",
+  Yaletown : "David Lam Park",
+  UBC : "Pacific Spirit Park"
+};
+
+assertEqual(findKeyByValue(parksInVan, "Stanley Park"), "WestEnd");
+assertEqual(findKeyByValue(parksInVan, "Emery Barnes Park"), "Yaletown");
+assertEqual(findKeyByValue(parksInVan, "Pacific Spirit Park"), "UBC");
