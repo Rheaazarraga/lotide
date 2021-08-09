@@ -22,7 +22,6 @@ const findKey = function(object, callback) {
   }
 };
 
-
 //TEST CASES:
 
 findKey({
@@ -42,3 +41,15 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2), "noma");
+
+//2ND TEST CASE:
+
+const bestVikings = {
+  "Ragnar Lothbrok" : { rank : "Legendary King" },
+  "Bjorn Ironside" : { rank : "King of Kings" },
+  "Lagertha the Shield Maiden" : { rank : "Queen of Vikings" },
+  "Ivar the Boneless" : { rank : "The Unpredictable"},
+  "Ubbe Lothbrok" : {rank : "The Western Explorer"}
+};
+
+assertEqual(findKey(bestVikings, x => x.rank === "Queen of Vikings"), "Lagertha the Shield Maiden");
