@@ -13,7 +13,7 @@ const takeUntil = function(array, callback) {
   return results; //return the array of reults
 };
 
-//TEST CODE:
+//TEST CASE:
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5]; //expected input
 const results1 = takeUntil(data1, x => x < 0);
 console.log(results1);
