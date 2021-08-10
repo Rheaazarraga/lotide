@@ -1,19 +1,19 @@
-const eqArrays = function(list1, list2) {
-  if (list1.length !== list2.length)
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length)
     return false;
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i])
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i])
       return false;
 
   }
   return true;
 };
 
-const assertArraysEqual = function(list1, list2) {
-  if (eqArrays(list1, list2)) {
-    console.log(`Assertion Passed: ${list1} ✅ ${list2}`);
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`Assertion Passed: ${actual} ✅ ${expected}`);
   } else {
-    console.log(`Assertion Failed: ${list1} ❌ ${list2}`);
+    console.log(`Assertion Failed: ${actual} ❌ ${expected}`);
   }
 };
 
@@ -31,7 +31,7 @@ const flatten = function(array) {
   }
   return flattenedArray;   //return the flattened array
 
-}
+};
 
 //TEST CASES:
 console.log(flatten([1, 2, 3, [4, 5], [6]]));
