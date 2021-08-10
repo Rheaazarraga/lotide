@@ -4,7 +4,6 @@ const eqArrays = function(actual, expected) {
   for (let i = 0; i < actual.length; i++) {
     if (actual[i] !== expected[i])
       return false;
-
   }
   return true;
 };
@@ -57,4 +56,4 @@ middle([1, 2, 3, 4, 5]); // => [3]
 middle([1, 2, 3, 4]); // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
 (assertArraysEqual([5, 4, 3, 2, 1], [5, 4, 2 ,1]));
-(assertArraysEqual(["bita "+ "bean " + "baby"], ["bita " + "bean "+ "baby"]));
+(assertArraysEqual(["bita " + "bean " + "baby"], ["bita " + "bean " + "baby"]));
