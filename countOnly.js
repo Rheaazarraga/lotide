@@ -20,8 +20,8 @@ const countOnly = function(allItems, itemsToCount) {
       results[item] = 1;
     }
   }
-  // The function should report back how many instances of each string were found in the allItems array of strings.
-  return results;
+  
+  return results; // The function should report back how many instances of each string were found in the allItems array of strings.
 };
   
 //TEST CODE:
@@ -57,7 +57,9 @@ const teaTypes = [
   "chamomille",
   "black tea"
 ];
+
 const result2 = countOnly(teaTypes, { "matcha" : true, "chamomille" : true, "oolong" : false, "black tea" : true});
+
 assertEqual(result2["matcha"], 1);
 assertEqual(result2["chamomille"], 3);
 assertEqual(result2["green tea"], 2);
