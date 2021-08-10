@@ -1,8 +1,8 @@
-const eqArrays = function(list1, list2) {
-  if (list1.length !== list2.length)
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length)
     return false;
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i])
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i])
       return false;
       
   }
