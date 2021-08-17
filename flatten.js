@@ -23,5 +23,5 @@ module.exports = flatten;
 //TEST CASES:
 // console.log(flatten([1, 2, 3, [4, 5], [6]]));
 // console.log(flatten([["negronis"], "mimosas", ["sidecars"]]));
-// //TESTING ASSERTION when running assertion, you need to send it 2 arrays. The flatten function call and then a second array that will be used as the validator.
+// TESTING ASSERTION when running assertion, you need to send it 2 arrays. The flatten function call and then a second array that will be used as the validator.
 // assertArraysEqual(flatten([100, 200, [300, 400], 500]), [100, 200, 300, 400, 500]);
