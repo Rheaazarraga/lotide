@@ -1,16 +1,14 @@
 //Implement takeUntil which will keep collecting items from a provided array until the callback provided *returns a truthy value.
 
 const takeUntil = function(array, callback) {
-  let results = [];
+  const results = [];
   for (let item of array) {
-    if (callback(item)) {
-      return results;
-    } else {
+    if (!callback(item)) {
       results.push(item);
+    } else {
+      return results;
     }
-    return results;
   }
-
 };
 
 //EXPORT
